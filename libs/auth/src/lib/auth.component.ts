@@ -1,15 +1,8 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'lib-auth',
-  template: `
-    <p>
-      auth works!
-    </p>
-  `,
-  styles: [
-  ]
+  selector: "lib-auth",
+  template: ` <p>auth works!</p> `,
+  styles: [],
 })
-export class AuthComponent {
-
-}
+export class AuthComponent {}
