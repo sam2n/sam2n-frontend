@@ -17,6 +17,13 @@ const routes: Routes = [
         path: "start",
         component: StartComponent,
       },
+      {
+        path: "login",
+        loadChildren: () =>
+          import("./../.././../../libs/login/src/lib/login.module").then(
+            m => m.LoginModule
+          ),
+      },
     ],
   },
 ];

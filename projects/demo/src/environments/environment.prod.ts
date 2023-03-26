@@ -3,5 +3,5 @@ export const environment = {
   envName: "PROD",
   production: true,
   test: false,
-  i18nPrefix: "/angular-ngrx-material-starter"
+  i18nPrefix: "/angular-ngrx-material-starter",
 };
