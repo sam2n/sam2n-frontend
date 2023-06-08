@@ -1,0 +1,33 @@
+:host ::ng-deep {
+.mdc-text-field--filled {
+    background: none;
+}
+
+.mdc-text-field {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.mat-mdc-form-field-focus-overlay {
+    background: none;
+}
+
+.mat-mdc-button.mat-mdc-button-base, .mat-mdc-raised-button.mat-mdc-button-base, .mat-mdc-unelevated-button.mat-mdc-button-base, .mat-mdc-outlined-button.mat-mdc-button-base {
+    border-radius: 36px;
+    height: 48px;
+}
+
+.mdc-button .mdc-button__label {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 36px;
+}
+
+.mdc-button__label {
+    @apply tracking-wider uppercase
+}
+
+.mat-mdc-checkbox .mdc-form-field {
+    color: #000000;
+}
+}
