@@ -2,7 +2,10 @@
   <mat-toolbar color="primary">
     <div class="flex w-full items-center justify-between">
       <span>Not Just Sport</span>
-      <button mat-raised-button [routerLink]="'/login'">Log In</button>
+      <div class="flex gap-1.5">
+        <button mat-button [routerLink]="'/auth/signup'">Sign Up</button>
+        <button mat-raised-button [routerLink]="'/auth/login'">Log In</button>
+      </div>
     </div>
   </mat-toolbar>
   <div class="my-16 flex justify-center">

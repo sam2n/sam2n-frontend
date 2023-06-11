@@ -11,10 +11,19 @@
     <form class="mt-5" [formGroup]="form">
       <div class="flex flex-col">
         <mat-form-field appearance="fill">
+          <mat-label>User name</mat-label>
+          <input
+            formControlName="name"
+            type="text"
+            autocomplete="name"
+            id="name"
+            matInput />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
           <mat-label>Email address</mat-label>
           <input
             formControlName="email"
-            appearance="fill"
             type="email"
             autocomplete="email"
             id="email-address"
@@ -34,24 +43,12 @@
 
       <div>
         <button
-          (click)="signIn()"
+          (click)="submit()"
           mat-raised-button
           color="primary"
           class="mt-4 w-full">
-          LOG IN
+          Sign Up
         </button>
-      </div>
-
-      <div class="mt-7 flex items-center justify-between">
-        <div class="flex items-center">
-          <mat-checkbox color="primary" id="remember-me">
-            Remember me
-          </mat-checkbox>
-        </div>
-
-        <div class="text-sm">
-          <a color="primary" mat-button>Forgot password?</a>
-        </div>
       </div>
     </form>
   </div>

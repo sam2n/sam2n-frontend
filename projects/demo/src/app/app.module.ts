@@ -6,9 +6,10 @@ import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { CoreModule } from "../../../../libs/core/src/lib/core.module";
 import { StartComponent } from "./start/start.component";
+import { DashboardComponent } from "./dashboard/dashboard/dashboard.component";
 
 @NgModule({
-  declarations: [AppComponent, StartComponent],
+  declarations: [AppComponent, StartComponent, DashboardComponent],
   imports: [
     // angular
     BrowserAnimationsModule,
