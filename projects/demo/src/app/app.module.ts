@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { CoreModule } from "../../../../libs/core/src/lib/core.module";
 import { StartComponent } from "./start/start.component";
 import { DashboardComponent } from "./dashboard/dashboard/dashboard.component";
+import { AuthModule } from "../../../../libs/auth/src/lib/auth.module";
 
 @NgModule({
   declarations: [AppComponent, StartComponent, DashboardComponent],
@@ -17,6 +18,7 @@ import { DashboardComponent } from "./dashboard/dashboard/dashboard.component";
 
     // core
     CoreModule,
+    AuthModule,
 
     // app
     AppRoutingModule,

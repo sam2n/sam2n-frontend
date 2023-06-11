@@ -13,6 +13,7 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatTooltipModule } from "@angular/material/tooltip";
 import { AppErrorHandler } from "./error-handler/app-error-handler.service";
 import { HttpErrorInterceptor } from "./http-interceptors/http-error.interceptor";
+import { AuthHeaderInterceptor } from "./http-interceptors/auth-header.interceptor";
 
 @NgModule({
   declarations: [],
@@ -52,6 +53,11 @@ import { HttpErrorInterceptor } from "./http-interceptors/http-error.interceptor
     // core error handlers
     { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },
     { provide: ErrorHandler, useClass: AppErrorHandler },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthHeaderInterceptor,
+      multi: true,
+    },
   ],
 })
 export class CoreModule {
