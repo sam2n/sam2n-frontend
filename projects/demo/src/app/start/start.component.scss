@@ -1,0 +1,21 @@
+.promo-font {
+  font-family: 'Poppins', sans-serif;
+}
+
+:host ::ng-deep {
+  .mat-mdc-button.mat-mdc-button-base, .mat-mdc-raised-button.mat-mdc-button-base, .mat-mdc-unelevated-button.mat-mdc-button-base, .mat-mdc-outlined-button.mat-mdc-button-base {
+    border-radius: 36px;
+    height: 48px;
+  }
+
+  .mdc-button .mdc-button__label {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 36px;
+    padding: 0 54px;
+  }
+
+  .mdc-button__label {
+    @apply tracking-wider uppercase
+  }
+}
