@@ -1,0 +1,24 @@
+name: Build and Test Angular app
+run-name: Build and Test Angular app
+on: [pull_request]
+env:
+  node_version: '18.16.1'
+  ng_version: '15.2.2'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: $node_version
+      - name: Verify node.js installation
+        run: npm --version
+      - name: Install Angular CLI
+        run: npm i @angular/cli@$ng_version
+      - name: Verify Angular CLI installation
+        run: npm ng --version
+      - name: Build
+        run: npm ng build
+      - name: Test
+        run: npm ng test
