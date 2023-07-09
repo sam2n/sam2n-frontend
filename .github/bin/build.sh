@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sh ./install.sh
+. ./.github/bin/install.sh
 
 npm install
 ng build demo
