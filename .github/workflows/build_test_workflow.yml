@@ -20,7 +20,10 @@ jobs:
         run: export PATH="$HOME/.npm-global/bin:$PATH"
       - name: Verify Angular CLI installation
         run: ng version
+      - name: npm install
+        run: npm install
       - name: Build
-        run: ng build account && ng build auth && ng build core && ng build login
+#        run: ng build account && ng build auth && ng build core && ng build login
+        run: ng build
       - name: Test
         run: ng test
