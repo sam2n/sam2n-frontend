@@ -5,7 +5,6 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build-all": "ng build account && ng build auth && ng build core && ng build login",
     "watch": "ng build --watch --configuration development",
     "lint": "ng lint",
     "prepare": "husky install"
