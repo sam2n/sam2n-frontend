@@ -21,6 +21,6 @@ jobs:
       - name: Verify Angular CLI installation
         run: ng version
       - name: Build
-        run: ng build
+        run: ng build-all
       - name: Test
         run: ng test
