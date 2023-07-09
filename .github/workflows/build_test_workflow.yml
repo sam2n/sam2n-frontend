@@ -6,24 +6,24 @@ env:
   ng_version: '15.2.2'
 jobs:
   build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: ${{ env.node_version }}
-      - name: Verify node.js installation
-        run: npm --version
-      - name: Install Angular CLI
-        run: npm install -g @angular/cli@$ng_version
-      - name: Set ng PATH
-        run: export PATH="$HOME/.npm-global/bin:$PATH"
-      - name: Verify Angular CLI installation
-        run: ng version
-      - name: npm install
-        run: npm install
-      - name: Build
-#        run: ng build account && ng build auth && ng build core && ng build login
-        run: ng build demo
-      - name: Test
-        run: ng test
+    uses: ./.github/workflows/build_test_reusable_workflow.yml
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v3
+#      - uses: actions/setup-node@v3
+#        with:
+#          node-version: ${{ env.node_version }}
+#      - name: Verify node.js installation
+#        run: npm --version
+#      - name: Install Angular CLI
+#        run: npm install -g @angular/cli@$ng_version
+#      - name: Set ng PATH
+#        run: export PATH="$HOME/.npm-global/bin:$PATH"
+#      - name: Verify Angular CLI installation
+#        run: ng version
+#      - name: npm install
+#        run: npm install
+#      - name: Build
+#        run: ng build demo
+##      - name: Test
+##        run: ng test
