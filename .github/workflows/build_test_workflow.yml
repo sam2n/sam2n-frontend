@@ -24,6 +24,6 @@ jobs:
         run: npm install
       - name: Build
 #        run: ng build account && ng build auth && ng build core && ng build login
-        run: ng build
+        run: ng build demo
       - name: Test
         run: ng test
