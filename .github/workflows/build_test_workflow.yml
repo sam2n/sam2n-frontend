@@ -17,8 +17,8 @@ jobs:
       - name: Install Angular CLI
         run: npm i @angular/cli@$ng_version
       - name: Verify Angular CLI installation
-        run: npm ng --version
+        run: ng --version
       - name: Build
-        run: npm ng build
+        run: ng build
       - name: Test
-        run: npm ng test
+        run: ng test
