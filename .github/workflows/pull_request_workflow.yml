@@ -1,0 +1,6 @@
+name: Build and Test Angular app
+run-name: Build and Test Angular app
+on: [pull_request]
+jobs:
+  build:
+    uses: ./.github/workflows/build_test_reusable_workflow.yml
