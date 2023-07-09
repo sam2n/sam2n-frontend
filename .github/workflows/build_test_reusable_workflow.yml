@@ -21,6 +21,8 @@ jobs:
         with:
           node-version: ${{ inputs.node-version }}
       - run: echo "ANGULAR_CLI_VERSION=${{ inputs.ng-version }}" >> $GITHUB_ENV
+      - run: chmod +x ./.github/bin/build.sh
+        shell: bash
       - name: Build
         run: ./.github/bin/build.sh
         shell: bash
