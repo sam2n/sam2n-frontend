@@ -15,9 +15,11 @@ jobs:
       - name: Verify node.js installation
         run: npm --version
       - name: Install Angular CLI
-        run: npm i @angular/cli@$ng_version
+        run: npm install -g @angular/cli@$ng_version
+      - name: Set ng PATH
+        run: export PATH="$HOME/.npm-global/bin:$PATH"
       - name: Verify Angular CLI installation
-        run: ng --version
+        run: ng version
       - name: Build
         run: ng build
       - name: Test
