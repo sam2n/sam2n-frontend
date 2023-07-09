@@ -17,18 +17,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ inputs.node-version }}
-
       - run: echo "ANGULAR_CLI_VERSION=${{ inputs.ng-version }}" >> $GITHUB_ENV
-
       - name: Build
-        run: bash ./build.sh
-
-      # TODO: add test
-
+        run: ./.github/bin/build.sh
+        shell: bash
+      # TODO: add test here
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
